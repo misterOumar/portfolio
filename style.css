@@ -444,4 +444,41 @@ gap: 20px;
     }
 }
 /* EXPERIENCE section Ends */
+
+/* PORTFOLIO section Start */
+#portfolio .port-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 70px;
+}
+#portfolio .port-row .img{
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.18);
+}
+#portfolio .port-row .img img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    transition: .5s;
+}
+#portfolio .port-row .img:hover img{
+transform: scale(1.09);
+}
+/* Responsive view */
+@media only screen and (max-width:650px) {
+    #portfolio .port-row{
+        grid-template-columns:  1fr 1fr;
+        
+    }
+}
+@media only screen and (max-width:400px) {
+    #portfolio .port-row{
+        grid-template-columns:  1fr;
+        margin: 0 20px;
+        
+    }
+}
+/* PORTFOLIO section Ends */
 /* ----------------------   MAIN SECTION END ------------------------------- */
