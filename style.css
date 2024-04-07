@@ -114,9 +114,8 @@ header nav ul li{
     padding: 2px 25px;
     border-left: var(--border);
 }
-header nav ul li a{
-    
-    
+header nav ul li a{  
+    display: inline-block;
     color: var(--textColor);
     font-size: 14px;
     font-weight: 500;
@@ -382,4 +381,67 @@ main{
     }
 }
 /* ABOUT section Ends */
+
+/* EXPERIENCE section Start */
+#exp .exp-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+#exp .exp-row .exp-box{
+background-color: var(--boxBgColor);
+border-radius: 10px;
+padding: 35px 30px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+#exp .exp-row .exp-box i{
+    width: 45px;
+    height: 45px;
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    line-height: 45px;
+    margin-bottom: 7px;
+    position: relative;
+}
+#exp .exp-row .exp-box i:after{
+    content: '';
+    position: absolute;
+    right: -80px;
+    top: 45%;
+    width: 70px;
+    height: 1px;
+    background-color: var(--mainColor);
+}
+#exp .exp-row .exp-box h2{
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: whitesmoke;
+    margin-right: 120px;
+}
+/* Responsive View */
+@media only screen and (max-width: 1350px) {
+    #exp .exp-row .exp-box h2{
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 630px) {
+    #exp .exp-row {
+        margin-right: 0;
+        grid-template-columns: 1fr;
+    }
+    #exp .exp-row .exp-box h2{
+        margin-right: 50px;
+    }
+}
+@media only screen and (max-width: 470px) {
+    #exp .exp-row .exp-box h2{
+        margin-right: 0;
+    }
+}
+/* EXPERIENCE section Ends */
 /* ----------------------   MAIN SECTION END ------------------------------- */
