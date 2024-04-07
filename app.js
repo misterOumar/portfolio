@@ -2,7 +2,7 @@
 let menuBtn = document.getElementById('menuBtn')
 menuBtn.addEventListener('click',()=>{
     document.querySelector('body').classList.toggle('toggle-header');
-    menuBtn.classList.toggle('fa-xmark')
+    menuBtn.classList.toggle('bx-x')
 })
 // ======== HEADER Toggle END ===========
 
@@ -30,3 +30,24 @@ window.addEventListener('scroll', function(){
     })
 })
 // ======== SKILL BAR ANIMATION END ===========
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var mainImage = document.getElementById("mainImage");
+
+    // Sauvegarder la source originale de l'image
+    var originalSrc = mainImage.src;
+
+    // Nouvelle source au survol
+    var newSrc = "./images/misterOumar2.jpg";
+
+    // Changer la source au survol
+    mainImage.addEventListener("mouseenter", function () {
+        mainImage.src = newSrc;
+    });
+
+    // Restaurer la source d'origine lorsque l'on ne survole plus
+    mainImage.addEventListener("mouseleave", function () {
+        mainImage.src = originalSrc;
+    });
+});

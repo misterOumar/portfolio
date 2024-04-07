@@ -320,6 +320,8 @@ main{
     width: 100%;
     border-radius: 10px;
     box-shadow: -10px 10px 50px rgba(0,0,0,0.19);
+    cursor: pointer;
+    transition: src 0.6s ease-in-out;
 }
 #about .about-row .img-col::before{
     content: '';
