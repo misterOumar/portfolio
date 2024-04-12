@@ -31,6 +31,27 @@ window.addEventListener('scroll', function(){
 })
 // ======== SKILL BAR ANIMATION END ===========
 
+// ======== ACTIVE LINK STATE START ===========
+let navLinks = document.querySelectorAll('header nav ul li a')
+let Section = document.querySelectorAll('section')
+
+window.addEventListener('scroll', ()=> {
+    
+    let scrollPos = window.scrollY + 10;
+    console.log(scrollPos);
+    Section.forEach(section => {
+        if (scrollPos > section.offsetTop && scrollPos < (section.offsetTop + section.offsetHeight)) {
+            navLinks.forEach(link =>{
+                link.classList.remove('active')
+                if (section.getAttribute('id') === link.getAttribute('href').substring(1)) {
+                    link.classList.add("active")
+                }
+            })
+        }
+    })
+})
+// ======== ACTIVE LINK STATE END ===========
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var mainImage = document.getElementById("mainImage");
