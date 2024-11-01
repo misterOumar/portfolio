@@ -38,7 +38,6 @@ let Section = document.querySelectorAll('section')
 window.addEventListener('scroll', ()=> {
     
     let scrollPos = window.scrollY + 10;
-    console.log(scrollPos);
     Section.forEach(section => {
         if (scrollPos > section.offsetTop && scrollPos < (section.offsetTop + section.offsetHeight)) {
             navLinks.forEach(link =>{
@@ -72,3 +71,34 @@ document.addEventListener("DOMContentLoaded", function () {
         mainImage.src = originalSrc;
     });
 });
+
+
+// ======== CONSTACT FORM ===========
+document.addEventListener("DOMContentLoaded", function () {
+    
+
+    const contactForm = document.getElementById("contact-form");
+
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Préparation des données pour correspondre aux variables du template
+        const formData = {
+            to_name: "Mister Oumar",  
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            message: document.getElementById("msg").value,
+        };
+
+        // Envoi via EmailJS
+        emailjs.send("service_9k22cng", "template_tnbdeds", formData)
+            .then((response) => {
+                document.getElementById("response-message").textContent = "Message envoyé avec succès!";
+            })
+            .catch((error) => {
+                document.getElementById("response-message").textContent = "Erreur lors de l'envoi du message.";
+                console.error("Erreur:", error);
+            });
+    });
+});
+

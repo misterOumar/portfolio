@@ -52,11 +52,12 @@
         </ul>
       </nav>
       <div class="social-icon">
-        <a href="#"><i class="fa-solid fa-phone"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="tel:0688396051"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/2250554516932" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://github.com/misterOumar" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="www.linkedin.com/in/oumar-coulibaly-1a2356241" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/misteroumar_/"  target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
       </div>
     </header>
     <!-- HEADER END -->
@@ -67,17 +68,18 @@
       <section id="home" class="padding">
         <div class="home-row">
           <h1>
-            Hey ! <box-icon type="solid" name="balloon"></box-icon>
+            Hello ! <box-icon type="solid" name="balloon"></box-icon>
             <i class="bx bxs-balloon"></i> Je suis mister Oumar
           </h1>
           <p><span class="typingAnimation"></span></p>
           <div class="buttons">
-            <a href="#" class="btn">Services</a>
+            <a href="./assets/Oumar_Coulibaly_CV_2024.pdf" class="btn" download>Telecharger mon CV</a>
 
-            <a href="#" class="btn">Détails</a>
+            <a href="#contact" class="btn">Contactez-moi</a>
           </div>
-          <a href="#about"
-            ><img src="./images/scroll-down-mouse.webp" alt="" width="60px"
+          <a href="#about"  class="scroll-down">
+
+            <img src="./images/scroll-down-mouse.webp" alt="" width="60px"
           /></a>
         </div>
       </section>
@@ -95,16 +97,17 @@
           <div class="info-col">
             <h2 class="title">Je suis mister oumar</h2>
             <p class="sub-para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis vel eveniet, deserunt fugiat dolore at praesentium!
-              Maxime aspernatur fugit odio quis consequuntur iusto doloribus
-              itaque ab vel quibusdam porro deserunt deleniti architecto aperiam
-              facilis quas dignissimos harum eius sequi eum unde laborum, minus
-              iure pariatur! Possimus praesentium totam magnam officiis.
+              Je m'appelle Coulibaly Oumar, étudiant passionné en L3 MIAGE à l'Université de Rennes et 
+              développeur web et mobile avec 2 ans d'expérience acquise en Côte d'Ivoire⁠⁠. <br>
+              Ma passion ? Créer des applications innovantes et intuitives qui répondent aux besoins des utilisateurs. 
+              Je suis spécialisé dans les technologies web modernes et le développement mobile et 
+              j'aspire à mettre mes compétences au service de projets ambitieux. 
+              
             </p>
             <p class="sub-para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              enim autem eos asperiores aut tenetur!
+              Mon parcours m’a permis de me familiariser avec des langages de programmation tels que PHP
+              JavaScript, Dart, Python et Java, ainsi qu’avec des frameworks comme Laravel et Flutter. 
+              J’aime relever des défis techniques et chercher des solutions créatives à des problèmes complexes.
             </p>
 
             <!-- skills bar -->
@@ -263,13 +266,13 @@
         <h2 class="title">Prendre contact avec moi</h2>
 
         <div class="cont-form">
-          <form action="">
+          <form id="contact-form">
             <div class="cont-box">
-              <label for="name">Nom</label>
+              <label for="name">Nom ou Raison sociale</label>
               <input type="text" name="name" id="name" placeholder="Nom complet" required>
             </div>
             <div class="cont-box">
-              <label for="email">Nom</label>
+              <label for="email">Email</label>
               <input type="email" name="email" id="email" placeholder="Email" required>
             </div>
             <div class="cont-box">
@@ -279,6 +282,7 @@
             <div class="cont-box">
               <input type="submit" value="Envoyez le message">
             </div>
+            <p id="response-message"></p>
           </form>
         </div>
 
@@ -306,6 +310,18 @@
 
     <!-- typing library -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- EMAILJS FILE -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "AQIn2CqSgWQHdaiso",
+          });
+      })();
+    </script>
+
     <!-- JS FILE -->
     <script src="./app.js"></script>
   </body>

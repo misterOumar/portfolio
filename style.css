@@ -224,6 +224,7 @@ main {
   z-index: -1;
 }
 #home .home-row {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -251,6 +252,10 @@ main {
 #home .home-row .buttons a {
   font-size: 18px;
   border: 3px solid var(--mainColor);
+}
+#home .scroll-down{
+  position: absolute;
+  bottom: -70px;
 }
 /* responsive view */
 @media only screen and (max-width: 700px) {
